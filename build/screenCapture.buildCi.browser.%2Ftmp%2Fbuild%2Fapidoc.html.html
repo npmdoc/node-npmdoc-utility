@@ -1,0 +1,3999 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/node-modules/utility">utility (v1.12.0)</a>
+</h1>
+<h4>A collection of useful utilities.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.utility">module utility</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.YYYYMMDD">
+            function <span class="apidocSignatureSpan">utility.</span>YYYYMMDD
+            <span class="apidocSignatureSpan">(d, sep)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.YYYYMMDDHHmmss">
+            function <span class="apidocSignatureSpan">utility.</span>YYYYMMDDHHmmss
+            <span class="apidocSignatureSpan">(d, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.YYYYMMDDHHmmssSSS">
+            function <span class="apidocSignatureSpan">utility.</span>YYYYMMDDHHmmssSSS
+            <span class="apidocSignatureSpan">(d, msSep)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.accessLogDate">
+            function <span class="apidocSignatureSpan">utility.</span>accessLogDate
+            <span class="apidocSignatureSpan">(d)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.argumentsToArray">
+            function <span class="apidocSignatureSpan">utility.</span>argumentsToArray
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.assign">
+            function <span class="apidocSignatureSpan">utility.</span>assign
+            <span class="apidocSignatureSpan">(target, objects)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.base64decode">
+            function <span class="apidocSignatureSpan">utility.</span>base64decode
+            <span class="apidocSignatureSpan">(encodeStr, urlsafe, encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.base64encode">
+            function <span class="apidocSignatureSpan">utility.</span>base64encode
+            <span class="apidocSignatureSpan">(s, urlsafe)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.datestruct">
+            function <span class="apidocSignatureSpan">utility.</span>datestruct
+            <span class="apidocSignatureSpan">(now)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.decodeURIComponent">
+            function <span class="apidocSignatureSpan">utility.</span>decodeURIComponent
+            <span class="apidocSignatureSpan">(encodeText)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.dig">
+            function <span class="apidocSignatureSpan">utility.</span>dig
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.encodeURIComponent">
+            function <span class="apidocSignatureSpan">utility.</span>encodeURIComponent
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.escape">
+            function <span class="apidocSignatureSpan">utility.</span>escape
+            <span class="apidocSignatureSpan">(string)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.getParamNames">
+            function <span class="apidocSignatureSpan">utility.</span>getParamNames
+            <span class="apidocSignatureSpan">(func, cache)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.has">
+            function <span class="apidocSignatureSpan">utility.</span>has
+            <span class="apidocSignatureSpan">(obj, prop)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.hash">
+            function <span class="apidocSignatureSpan">utility.</span>hash
+            <span class="apidocSignatureSpan">(method, s, format)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.hmac">
+            function <span class="apidocSignatureSpan">utility.</span>hmac
+            <span class="apidocSignatureSpan">(algorithm, key, data, encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.includesInvalidHttpHeaderChar">
+            function <span class="apidocSignatureSpan">utility.</span>includesInvalidHttpHeaderChar
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.isSafeNumberString">
+            function <span class="apidocSignatureSpan">utility.</span>isSafeNumberString
+            <span class="apidocSignatureSpan">(s)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.logDate">
+            function <span class="apidocSignatureSpan">utility.</span>logDate
+            <span class="apidocSignatureSpan">(d, msSep)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.map">
+            function <span class="apidocSignatureSpan">utility.</span>map
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.md5">
+            function <span class="apidocSignatureSpan">utility.</span>md5
+            <span class="apidocSignatureSpan">(s, format)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.noop">
+            function <span class="apidocSignatureSpan">utility.</span>noop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.random">
+            function <span class="apidocSignatureSpan">utility.</span>random
+            <span class="apidocSignatureSpan">(lower, upper)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.randomSlice">
+            function <span class="apidocSignatureSpan">utility.</span>randomSlice
+            <span class="apidocSignatureSpan">(arr, num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.randomString">
+            function <span class="apidocSignatureSpan">utility.</span>randomString
+            <span class="apidocSignatureSpan">(length, charSet)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.replace">
+            function <span class="apidocSignatureSpan">utility.</span>replace
+            <span class="apidocSignatureSpan">(str, substr, newSubstr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.replaceInvalidHttpHeaderChar">
+            function <span class="apidocSignatureSpan">utility.</span>replaceInvalidHttpHeaderChar
+            <span class="apidocSignatureSpan">(val, replacement)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.setImmediate">
+            function <span class="apidocSignatureSpan">utility.</span>setImmediate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.sha1">
+            function <span class="apidocSignatureSpan">utility.</span>sha1
+            <span class="apidocSignatureSpan">(s, format)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.sha256">
+            function <span class="apidocSignatureSpan">utility.</span>sha256
+            <span class="apidocSignatureSpan">(s, format)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.spliceOne">
+            function <span class="apidocSignatureSpan">utility.</span>spliceOne
+            <span class="apidocSignatureSpan">(arr, index)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.split">
+            function <span class="apidocSignatureSpan">utility.</span>split
+            <span class="apidocSignatureSpan">(str, sep)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.splitAlwaysOptimized">
+            function <span class="apidocSignatureSpan">utility.</span>splitAlwaysOptimized
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.strictJSONParse">
+            function <span class="apidocSignatureSpan">utility.</span>strictJSONParse
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.timestamp">
+            function <span class="apidocSignatureSpan">utility.</span>timestamp
+            <span class="apidocSignatureSpan">(t)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.toSafeNumber">
+            function <span class="apidocSignatureSpan">utility.</span>toSafeNumber
+            <span class="apidocSignatureSpan">(s)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.try">
+            function <span class="apidocSignatureSpan">utility.</span>try
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">utility.</span>MAX_SAFE_INTEGER</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">utility.</span>MIN_SAFE_INTEGER</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">utility.</span>array</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">utility.</span>crypto</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">utility.</span>date</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">utility.</span>function</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">utility.</span>json</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">utility.</span>number</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">utility.</span>object</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">utility.</span>optimize</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">utility.</span>polyfill</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">utility.</span>string</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">utility.</span>web</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">utility.</span>MAX_SAFE_INTEGER_STR</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.utility.array">module utility.array</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.array.randomSlice">
+            function <span class="apidocSignatureSpan">utility.array.</span>randomSlice
+            <span class="apidocSignatureSpan">(arr, num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.array.spliceOne">
+            function <span class="apidocSignatureSpan">utility.array.</span>spliceOne
+            <span class="apidocSignatureSpan">(arr, index)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.utility.crypto">module utility.crypto</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.crypto.base64decode">
+            function <span class="apidocSignatureSpan">utility.crypto.</span>base64decode
+            <span class="apidocSignatureSpan">(encodeStr, urlsafe, encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.crypto.base64encode">
+            function <span class="apidocSignatureSpan">utility.crypto.</span>base64encode
+            <span class="apidocSignatureSpan">(s, urlsafe)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.crypto.hash">
+            function <span class="apidocSignatureSpan">utility.crypto.</span>hash
+            <span class="apidocSignatureSpan">(method, s, format)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.crypto.hmac">
+            function <span class="apidocSignatureSpan">utility.crypto.</span>hmac
+            <span class="apidocSignatureSpan">(algorithm, key, data, encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.crypto.md5">
+            function <span class="apidocSignatureSpan">utility.crypto.</span>md5
+            <span class="apidocSignatureSpan">(s, format)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.crypto.sha1">
+            function <span class="apidocSignatureSpan">utility.crypto.</span>sha1
+            <span class="apidocSignatureSpan">(s, format)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.crypto.sha256">
+            function <span class="apidocSignatureSpan">utility.crypto.</span>sha256
+            <span class="apidocSignatureSpan">(s, format)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.utility.date">module utility.date</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.date.YYYYMMDD">
+            function <span class="apidocSignatureSpan">utility.date.</span>YYYYMMDD
+            <span class="apidocSignatureSpan">(d, sep)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.date.YYYYMMDDHHmmss">
+            function <span class="apidocSignatureSpan">utility.date.</span>YYYYMMDDHHmmss
+            <span class="apidocSignatureSpan">(d, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.date.YYYYMMDDHHmmssSSS">
+            function <span class="apidocSignatureSpan">utility.date.</span>YYYYMMDDHHmmssSSS
+            <span class="apidocSignatureSpan">(d, msSep)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.date.accessLogDate">
+            function <span class="apidocSignatureSpan">utility.date.</span>accessLogDate
+            <span class="apidocSignatureSpan">(d)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.date.datestruct">
+            function <span class="apidocSignatureSpan">utility.date.</span>datestruct
+            <span class="apidocSignatureSpan">(now)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.date.logDate">
+            function <span class="apidocSignatureSpan">utility.date.</span>logDate
+            <span class="apidocSignatureSpan">(d, msSep)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.date.timestamp">
+            function <span class="apidocSignatureSpan">utility.date.</span>timestamp
+            <span class="apidocSignatureSpan">(t)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.utility.function">module utility.function</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.function.getParamNames">
+            function <span class="apidocSignatureSpan">utility.function.</span>getParamNames
+            <span class="apidocSignatureSpan">(func, cache)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.function.noop">
+            function <span class="apidocSignatureSpan">utility.function.</span>noop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.utility.json">module utility.json</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.json.strictJSONParse">
+            function <span class="apidocSignatureSpan">utility.json.</span>strictJSONParse
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.utility.number">module utility.number</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.number.isSafeNumberString">
+            function <span class="apidocSignatureSpan">utility.number.</span>isSafeNumberString
+            <span class="apidocSignatureSpan">(s)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.number.random">
+            function <span class="apidocSignatureSpan">utility.number.</span>random
+            <span class="apidocSignatureSpan">(lower, upper)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.number.toSafeNumber">
+            function <span class="apidocSignatureSpan">utility.number.</span>toSafeNumber
+            <span class="apidocSignatureSpan">(s)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">utility.number.</span>MAX_SAFE_INTEGER</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">utility.number.</span>MIN_SAFE_INTEGER</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">utility.number.</span>MAX_SAFE_INTEGER_STR</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.utility.object">module utility.object</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.object.assign">
+            function <span class="apidocSignatureSpan">utility.object.</span>assign
+            <span class="apidocSignatureSpan">(target, objects)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.object.has">
+            function <span class="apidocSignatureSpan">utility.object.</span>has
+            <span class="apidocSignatureSpan">(obj, prop)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.object.map">
+            function <span class="apidocSignatureSpan">utility.object.</span>map
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.utility.optimize">module utility.optimize</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.optimize.argumentsToArray">
+            function <span class="apidocSignatureSpan">utility.optimize.</span>argumentsToArray
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.optimize.dig">
+            function <span class="apidocSignatureSpan">utility.optimize.</span>dig
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.optimize.try">
+            function <span class="apidocSignatureSpan">utility.optimize.</span>try
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.utility.polyfill">module utility.polyfill</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.polyfill.setImmediate">
+            function <span class="apidocSignatureSpan">utility.polyfill.</span>setImmediate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.utility.string">module utility.string</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.string.includesInvalidHttpHeaderChar">
+            function <span class="apidocSignatureSpan">utility.string.</span>includesInvalidHttpHeaderChar
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.string.randomString">
+            function <span class="apidocSignatureSpan">utility.string.</span>randomString
+            <span class="apidocSignatureSpan">(length, charSet)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.string.replace">
+            function <span class="apidocSignatureSpan">utility.string.</span>replace
+            <span class="apidocSignatureSpan">(str, substr, newSubstr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.string.replaceInvalidHttpHeaderChar">
+            function <span class="apidocSignatureSpan">utility.string.</span>replaceInvalidHttpHeaderChar
+            <span class="apidocSignatureSpan">(val, replacement)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.string.split">
+            function <span class="apidocSignatureSpan">utility.string.</span>split
+            <span class="apidocSignatureSpan">(str, sep)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.string.splitAlwaysOptimized">
+            function <span class="apidocSignatureSpan">utility.string.</span>splitAlwaysOptimized
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.utility.web">module utility.web</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.web.decodeURIComponent">
+            function <span class="apidocSignatureSpan">utility.web.</span>decodeURIComponent
+            <span class="apidocSignatureSpan">(encodeText)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.web.encodeURIComponent">
+            function <span class="apidocSignatureSpan">utility.web.</span>encodeURIComponent
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.utility.web.escape">
+            function <span class="apidocSignatureSpan">utility.web.</span>escape
+            <span class="apidocSignatureSpan">(string)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.utility" id="apidoc.module.utility">module utility</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.utility.YYYYMMDD" id="apidoc.element.utility.YYYYMMDD">
+        function <span class="apidocSignatureSpan">utility.</span>YYYYMMDD
+        <span class="apidocSignatureSpan">(d, sep)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function YYYYMMDD(d, sep) {
+  if (typeof d === 'string') {
+    // YYYYMMDD(sep)
+    sep = d;
+    d = new Date();
+  } else {
+    // YYYYMMDD(d, sep)
+    d = d || new Date();
+    if (typeof sep !== 'string') {
+      sep = '-';
+    }
+  }
+  var date = d.getDate();
+  if (date &lt; 10) {
+    date = '0' + date;
+  }
+  var month = d.getMonth() + 1;
+  if (month &lt; 10) {
+    month = '0' + month;
+  }
+  return d.getFullYear() + sep + month + sep + date;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+utils.YYYYMMDDHHmmssSSS(','); // '2013-04-17 14:43:02,674'
+
+// 'YYYY-MM-DD HH:mm:ss' format date string
+utils.YYYYMMDDHHmmss(); // '2013-04-17 14:43:02'
+utils.YYYYMMDDHHmmss(new Date(), {dateSep: '.'}); // '2013.04.17 14:43:02'
+
+// 'YYYY-MM-DD' format date string
+utils.<span class="apidocCodeKeywordSpan">YYYYMMDD</span>(); // '2013-04-17'
+utils.YYYYMMDD(''); // '20130417'
+utils.YYYYMMDD(','); // '2013,04,17'
+
+// datestruct
+utils.datestruct(); // { YYYYMMDD: 20130416, H: 8 }
+
+// Unix's timestamp
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.YYYYMMDDHHmmss" id="apidoc.element.utility.YYYYMMDDHHmmss">
+        function <span class="apidocSignatureSpan">utility.</span>YYYYMMDDHHmmss
+        <span class="apidocSignatureSpan">(d, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">YYYYMMDDHHmmss = function (d, options) {
+  d = d || new Date();
+  if (!(d instanceof Date)) {
+    d = new Date(d);
+  }
+
+  var dateSep = '-';
+  var timeSep = ':';
+  if (options) {
+    if (options.dateSep) {
+      dateSep = options.dateSep;
+    }
+    if (options.timeSep) {
+      timeSep = options.timeSep;
+    }
+  }
+  var date = d.getDate();
+  if (date &lt; 10) {
+    date = '0' + date;
+  }
+  var month = d.getMonth() + 1;
+  if (month &lt; 10) {
+    month = '0' + month;
+  }
+  var hours = d.getHours();
+  if (hours &lt; 10) {
+    hours = '0' + hours;
+  }
+  var mintues = d.getMinutes();
+  if (mintues &lt; 10) {
+    mintues = '0' + mintues;
+  }
+  var seconds = d.getSeconds();
+  if (seconds &lt; 10) {
+    seconds = '0' + seconds;
+  }
+  return d.getFullYear() + dateSep + month + dateSep + date + ' ' +
+    hours + timeSep + mintues + timeSep + seconds;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// logDate,
+// 'YYYY-MM-DD HH:mm:ss.SSS' format date string
+utils.logDate(); // '2013-04-17 14:43:02.674'
+utils.YYYYMMDDHHmmssSSS(); // '2013-04-17 14:43:02.674'
+utils.YYYYMMDDHHmmssSSS(','); // '2013-04-17 14:43:02,674'
+
+// 'YYYY-MM-DD HH:mm:ss' format date string
+utils.<span class="apidocCodeKeywordSpan">YYYYMMDDHHmmss</span>(); // '2013-04-17 14:43:02'
+utils.YYYYMMDDHHmmss(new Date(), {dateSep: '.'}); // '2013.04.17 14:43:02'
+
+// 'YYYY-MM-DD' format date string
+utils.YYYYMMDD(); // '2013-04-17'
+utils.YYYYMMDD(''); // '20130417'
+utils.YYYYMMDD(','); // '2013,04,17'
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.YYYYMMDDHHmmssSSS" id="apidoc.element.utility.YYYYMMDDHHmmssSSS">
+        function <span class="apidocSignatureSpan">utility.</span>YYYYMMDDHHmmssSSS
+        <span class="apidocSignatureSpan">(d, msSep)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">YYYYMMDDHHmmssSSS = function (d, msSep) {
+  if (typeof d === 'string') {
+    // logDate(msSep)
+    msSep = d;
+    d = new Date();
+  } else {
+    // logDate(d, msSep)
+    d = d || new Date();
+  }
+  var date = d.getDate();
+  if (date &lt; 10) {
+    date = '0' + date;
+  }
+  var month = d.getMonth() + 1;
+  if (month &lt; 10) {
+    month = '0' + month;
+  }
+  var hours = d.getHours();
+  if (hours &lt; 10) {
+    hours = '0' + hours;
+  }
+  var mintues = d.getMinutes();
+  if (mintues &lt; 10) {
+    mintues = '0' + mintues;
+  }
+  var seconds = d.getSeconds();
+  if (seconds &lt; 10) {
+    seconds = '0' + seconds;
+  }
+  var milliseconds = d.getMilliseconds();
+  if (milliseconds &lt; 10) {
+    milliseconds = '00' + milliseconds;
+  } else if (milliseconds &lt; 100) {
+    milliseconds = '0' + milliseconds;
+  }
+  return d.getFullYear() + '-' + month + '-' + date + ' ' +
+    hours + ':' + mintues + ':' + seconds + (msSep || '.') + milliseconds;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+// accessLogDate
+utils.accessLogDate(); // '16/Apr/2013:16:40:09 +0800'
+
+// logDate,
+// 'YYYY-MM-DD HH:mm:ss.SSS' format date string
+utils.logDate(); // '2013-04-17 14:43:02.674'
+utils.<span class="apidocCodeKeywordSpan">YYYYMMDDHHmmssSSS</span>(); // '2013-04-17 14:43:02.674'
+utils.YYYYMMDDHHmmssSSS(','); // '2013-04-17 14:43:02,674'
+
+// 'YYYY-MM-DD HH:mm:ss' format date string
+utils.YYYYMMDDHHmmss(); // '2013-04-17 14:43:02'
+utils.YYYYMMDDHHmmss(new Date(), {dateSep: '.'}); // '2013.04.17 14:43:02'
+
+// 'YYYY-MM-DD' format date string
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.accessLogDate" id="apidoc.element.utility.accessLogDate">
+        function <span class="apidocSignatureSpan">utility.</span>accessLogDate
+        <span class="apidocSignatureSpan">(d)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">accessLogDate = function (d) {
+  // 16/Apr/2013:16:40:09 +0800
+  d = d || new Date();
+  var date = d.getDate();
+  if (date &lt; 10) {
+    date = '0' + date;
+  }
+  var hours = d.getHours();
+  if (hours &lt; 10) {
+    hours = '0' + hours;
+  }
+  var mintues = d.getMinutes();
+  if (mintues &lt; 10) {
+    mintues = '0' + mintues;
+  }
+  var seconds = d.getSeconds();
+  if (seconds &lt; 10) {
+    seconds = '0' + seconds;
+  }
+  return date + '/' + MONTHS[d.getMonth()] + '/' + d.getFullYear() +
+    ':' + hours + ':' + mintues + ':' + seconds + TIMEZONE;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+```
+
+### Date utils
+
+```js
+// accessLogDate
+utils.<span class="apidocCodeKeywordSpan">accessLogDate</span>(); // '16/Apr/2013:16:40:09 +0800'
+
+// logDate,
+// 'YYYY-MM-DD HH:mm:ss.SSS' format date string
+utils.logDate(); // '2013-04-17 14:43:02.674'
+utils.YYYYMMDDHHmmssSSS(); // '2013-04-17 14:43:02.674'
+utils.YYYYMMDDHHmmssSSS(','); // '2013-04-17 14:43:02,674'
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.argumentsToArray" id="apidoc.element.utility.argumentsToArray">
+        function <span class="apidocSignatureSpan">utility.</span>argumentsToArray
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">argumentsToArray = function (args) {
+  var res = new Array(args.length);
+  for (var i = 0; i &lt; args.length; i++) {
+    res[i] = args[i];
+  }
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// {error: Error, value: undefined}
+```
+
+### argumentsToArray
+
+```js
+function() {
+  const arr = utility.<span class="apidocCodeKeywordSpan">argumentsToArray</span>(arguments);
+  console.log(arr.join(', '));
+}
+```
+
+### JSON
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.assign" id="apidoc.element.utility.assign">
+        function <span class="apidocSignatureSpan">utility.</span>assign
+        <span class="apidocSignatureSpan">(target, objects)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">assign = function (target, objects) {
+  if (!Array.isArray(objects)) {
+    objects = [ objects ];
+  }
+
+  for (var i = 0; i &lt; objects.length; i++) {
+    var obj = objects[i];
+    if (obj) {
+      var keys = Object.keys(obj);
+      for (var j = 0; j &lt; keys.length; j++) {
+        var key = keys[j];
+        target[key] = obj[key];
+      }
+    }
+  }
+  return target;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+### Object.assign
+
+
+```js
+// assign object
+utility.<span class="apidocCodeKeywordSpan">assign</span>({}, { a: 1 });
+
+// assign multiple object
+utility.assign({}, [ { a: 1 }, { b: 1 } ]);
+```
+
+## benchmark
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.base64decode" id="apidoc.element.utility.base64decode">
+        function <span class="apidocSignatureSpan">utility.</span>base64decode
+        <span class="apidocSignatureSpan">(encodeStr, urlsafe, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function base64decode(encodeStr, urlsafe, encoding) {
+  if (urlsafe) {
+    encodeStr = encodeStr.replace(/\-/g, '+').replace(/_/g, '/');
+  }
+  var buf = new Buffer(encodeStr, 'base64');
+  if (encoding === 'buffer') {
+    return buf;
+  }
+  return buf.toString(encoding || 'utf8');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+### decode and encode
+
+```js
+// base64 encode
+utils.base64encode('ä½&nbsp;å¥½ï¿¥'); // '5L2g5aW977+l'
+utils.<span class="apidocCodeKeywordSpan">base64decode</span>('5L2g5aW977+l') // 'ä½&nbsp;å¥½ï¿¥'
+
+// urlsafe base64 encode
+utils.base64encode('ä½&nbsp;å¥½ï¿¥', true); // '5L2g5aW977-l'
+utils.base64decode('5L2g5aW977-l', true); // 'ä½&nbsp;å¥½ï¿¥'
+
+// html escape
+utils.escape('&lt;script/&gt;"&amp; &amp;amp;'); // '&amp;lt;script/&amp;gt;&amp;quot;&amp;amp; &amp;#
+x26;amp;'
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.base64encode" id="apidoc.element.utility.base64encode">
+        function <span class="apidocSignatureSpan">utility.</span>base64encode
+        <span class="apidocSignatureSpan">(s, urlsafe)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function base64encode(s, urlsafe) {
+  if (!Buffer.isBuffer(s)) {
+    s = new Buffer(s);
+  }
+  var encode = s.toString('base64');
+  if (urlsafe) {
+    encode = encode.replace(/\+/g, '-').replace(/\//g, '_');
+  }
+  return encode;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+utils.hmac('sha1', 'I am a key', 'hello world'); // 'pO6J0LKDxRRkvSECSEdxwKx84L0='
+```
+
+### decode and encode
+
+```js
+// base64 encode
+utils.<span class="apidocCodeKeywordSpan">base64encode</span>('ä½&nbsp;å¥½ï¿¥'); // '5L2g5aW977+l'
+utils.base64decode('5L2g5aW977+l') // 'ä½&nbsp;å¥½ï¿¥'
+
+// urlsafe base64 encode
+utils.base64encode('ä½&nbsp;å¥½ï¿¥', true); // '5L2g5aW977-l'
+utils.base64decode('5L2g5aW977-l', true); // 'ä½&nbsp;å¥½ï¿¥'
+
+// html escape
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.datestruct" id="apidoc.element.utility.datestruct">
+        function <span class="apidocSignatureSpan">utility.</span>datestruct
+        <span class="apidocSignatureSpan">(now)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">datestruct = function (now) {
+  now = now || new Date();
+  return {
+    YYYYMMDD: now.getFullYear() * 10000 + (now.getMonth() + 1) * 100 + now.getDate(),
+    H: now.getHours()
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// 'YYYY-MM-DD' format date string
+utils.YYYYMMDD(); // '2013-04-17'
+utils.YYYYMMDD(''); // '20130417'
+utils.YYYYMMDD(','); // '2013,04,17'
+
+// datestruct
+utils.<span class="apidocCodeKeywordSpan">datestruct</span>(); // { YYYYMMDD: 20130416, H: 8 }
+
+// Unix's timestamp
+utils.timestamp(); // 1378153226
+
+// Parse timestamp
+// seconds
+utils.timestamp(1385091596); // Fri Nov 22 2013 11:39:56 GMT+0800 (CST)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.decodeURIComponent" id="apidoc.element.utility.decodeURIComponent">
+        function <span class="apidocSignatureSpan">utility.</span>decodeURIComponent
+        <span class="apidocSignatureSpan">(encodeText)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function decodeURIComponent_(encodeText) {
+  try {
+    return decodeURIComponent(encodeText);
+  } catch (e) {
+    return encodeText;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+utils.base64encode('ä½&nbsp;å¥½ï¿¥', true); // '5L2g5aW977-l'
+utils.base64decode('5L2g5aW977-l', true); // 'ä½&nbsp;å¥½ï¿¥'
+
+// html escape
+utils.escape('&lt;script/&gt;"&amp; &amp;amp;'); // '&amp;lt;script/&amp;gt;&amp;quot;&amp;amp; &amp;#
+x26;amp;'
+
+// Safe encodeURIComponent and decodeURIComponent
+utils.<span class="apidocCodeKeywordSpan">decodeURIComponent</span>(utils.encodeURIComponent('ä½&nbsp;å¥½, nodejs')).should.equal
+('ä½&nbsp;å¥½, nodejs');
+```
+
+### others
+
+___[WARNNING] getIP() remove, PLEASE use `https://github.com/node-modules/address` module instead.___
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.dig" id="apidoc.element.utility.dig">
+        function <span class="apidocSignatureSpan">utility.</span>dig
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dig = function (obj) {
+  if (!obj) {
+    return;
+  }
+  if (arguments.length &lt;= 1) {
+    return obj;
+  }
+
+  var value = obj[arguments[1]];
+  for (var i = 2; i &lt; arguments.length; i++) {
+    if (!value) {
+      break;
+    }
+    value = value[arguments[i]];
+  }
+
+  return value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.encodeURIComponent" id="apidoc.element.utility.encodeURIComponent">
+        function <span class="apidocSignatureSpan">utility.</span>encodeURIComponent
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function encodeURIComponent_(text) {
+  try {
+    return encodeURIComponent(text);
+  } catch (e) {
+    return text;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+utils.base64encode('ä½&nbsp;å¥½ï¿¥', true); // '5L2g5aW977-l'
+utils.base64decode('5L2g5aW977-l', true); // 'ä½&nbsp;å¥½ï¿¥'
+
+// html escape
+utils.escape('&lt;script/&gt;"&amp; &amp;amp;'); // '&amp;lt;script/&amp;gt;&amp;quot;&amp;amp; &amp;#
+x26;amp;'
+
+// Safe encodeURIComponent and decodeURIComponent
+utils.decodeURIComponent(utils.<span class="apidocCodeKeywordSpan">encodeURIComponent</span>('ä½&nbsp;å¥½, nodejs')).should.equal
+('ä½&nbsp;å¥½, nodejs');
+```
+
+### others
+
+___[WARNNING] getIP() remove, PLEASE use `https://github.com/node-modules/address` module instead.___
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.escape" id="apidoc.element.utility.escape">
+        function <span class="apidocSignatureSpan">utility.</span>escape
+        <span class="apidocSignatureSpan">(string)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function escapeHtml(string) {
+  var str = '' + string;
+  var match = matchHtmlRegExp.exec(str);
+
+  if (!match) {
+    return str;
+  }
+
+  var escape;
+  var html = '';
+  var index = 0;
+  var lastIndex = 0;
+
+  for (index = match.index; index &lt; str.length; index++) {
+    switch (str.charCodeAt(index)) {
+      case 34: // "
+        escape = '&amp;quot;';
+        break;
+      case 38: // &amp;
+        escape = '&amp;amp;';
+        break;
+      case 39: // '
+        escape = '&amp;#39;';
+        break;
+      case 60: // &lt;
+        escape = '&amp;lt;';
+        break;
+      case 62: // &gt;
+        escape = '&amp;gt;';
+        break;
+      default:
+        continue;
+    }
+
+    if (lastIndex !== index) {
+      html += str.substring(lastIndex, index);
+    }
+
+    lastIndex = index + 1;
+    html += escape;
+  }
+
+  return lastIndex !== index
+    ? html + str.substring(lastIndex, index)
+    : html;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+utils.base64decode('5L2g5aW977+l') // 'ä½&nbsp;å¥½ï¿¥'
+
+// urlsafe base64 encode
+utils.base64encode('ä½&nbsp;å¥½ï¿¥', true); // '5L2g5aW977-l'
+utils.base64decode('5L2g5aW977-l', true); // 'ä½&nbsp;å¥½ï¿¥'
+
+// html escape
+utils.<span class="apidocCodeKeywordSpan">escape</span>('&lt;script/&gt;"&amp; &amp;amp;'); // '&amp;
+lt;script/&amp;gt;&amp;quot;&amp;amp; &amp;amp;'
+
+// Safe encodeURIComponent and decodeURIComponent
+utils.decodeURIComponent(utils.encodeURIComponent('ä½&nbsp;å¥½, nodejs')).should.equal('ä½&nbsp;å¥½, nodejs');
+```
+
+### others
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.getParamNames" id="apidoc.element.utility.getParamNames">
+        function <span class="apidocSignatureSpan">utility.</span>getParamNames
+        <span class="apidocSignatureSpan">(func, cache)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getParamNames(func, cache) {
+  cache = cache !== false;
+  if (cache &amp;&amp; func.__cache_names) {
+    return func.__cache_names;
+  }
+  var str = func.toString();
+  var names = str.slice(str.indexOf('(') + 1, str.indexOf(')')).match(/([^\s,]+)/g) || [];
+  func.__cache_names = names;
+  return names;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### others
+
+___[WARNNING] getIP() remove, PLEASE use `https://github.com/node-modules/address` module instead.___
+
+```js
+// get a function parameter's names
+utils.<span class="apidocCodeKeywordSpan">getParamNames</span>(function (key1, key2) {}); // ['key1', 'key2']
+
+// get a random string, default length is 16.
+utils.randomString(32, '1234567890'); //18774480824014856763726145106142
+
+// check if object has this property
+utils.has({hello: 'world'}, 'hello'); //true
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.has" id="apidoc.element.utility.has">
+        function <span class="apidocSignatureSpan">utility.</span>has
+        <span class="apidocSignatureSpan">(obj, prop)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function has(obj, prop) {
+  return Object.prototype.hasOwnProperty.call(obj, prop);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// get a function parameter's names
+utils.getParamNames(function (key1, key2) {}); // ['key1', 'key2']
+
+// get a random string, default length is 16.
+utils.randomString(32, '1234567890'); //18774480824014856763726145106142
+
+// check if object has this property
+utils.<span class="apidocCodeKeywordSpan">has</span>({hello: 'world'}, 'hello'); //true
+
+// empty function
+utils.noop = function () {}
+}
+```
+
+### Date utils
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.hash" id="apidoc.element.utility.hash">
+        function <span class="apidocSignatureSpan">utility.</span>hash
+        <span class="apidocSignatureSpan">(method, s, format)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hash(method, s, format) {
+  var sum = crypto.createHash(method);
+  var isBuffer = Buffer.isBuffer(s);
+  if (!isBuffer &amp;&amp; typeof s === 'object') {
+    s = JSON.stringify(sortObject(s));
+  }
+  sum.update(s, isBuffer ? 'binary' : 'utf8');
+  return sum.digest(format || 'hex');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*
+* @param {String|Buffer} s
+* @param {String} [format] output string format, could be 'hex' or 'base64'. default is 'hex'.
+* @return {String} md5 hash string
+* @public
+*/
+exports.md5 = function md5(s, format) {
+ return exports.<span class="apidocCodeKeywordSpan">hash</span>('md5', s, format);
+};
+
+/**
+* sha1 hash
+*
+* @param {String|Buffer} s
+* @param {String} [format] output string format, could be 'hex' or 'base64'. default is 'hex'.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.hmac" id="apidoc.element.utility.hmac">
+        function <span class="apidocSignatureSpan">utility.</span>hmac
+        <span class="apidocSignatureSpan">(algorithm, key, data, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hmac(algorithm, key, data, encoding) {
+  encoding = encoding || 'base64';
+  var hmac = crypto.createHmac(algorithm, key);
+  hmac.update(data, Buffer.isBuffer(data) ? 'binary' : 'utf8');
+  return hmac.digest(encoding);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+utils.sha256(new Buffer('è‹åƒ')).should.equal('75dd03e3fcdbba7d5bec07900bae740cc8e361d77e7df8949de421d3df5d3635'
+;);
+```
+
+### hmac
+
+```js
+// hmac-sha1 with base64 output encoding
+utils.<span class="apidocCodeKeywordSpan">hmac</span>('sha1', 'I am a key', 'hello world'); // '
+;pO6J0LKDxRRkvSECSEdxwKx84L0='
+```
+
+### decode and encode
+
+```js
+// base64 encode
+utils.base64encode('ä½&nbsp;å¥½ï¿¥'); // '5L2g5aW977+l'
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.includesInvalidHttpHeaderChar" id="apidoc.element.utility.includesInvalidHttpHeaderChar">
+        function <span class="apidocSignatureSpan">utility.</span>includesInvalidHttpHeaderChar
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function includesInvalidHttpHeaderChar(val) {
+  if (!val || typeof val !== 'string') {
+    return false;
+  }
+
+  for (var i = 0; i &lt; val.length; ++i) {
+    if (!validHdrChars[val.charCodeAt(i)]) {
+      return true;
+    }
+  }
+
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.isSafeNumberString" id="apidoc.element.utility.isSafeNumberString">
+        function <span class="apidocSignatureSpan">utility.</span>isSafeNumberString
+        <span class="apidocSignatureSpan">(s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isSafeNumberString(s) {
+  if (s[0] === '-') {
+    s = s.substring(1);
+  }
+  if (s.length &lt; MAX_SAFE_INTEGER_STR_LENGTH ||
+    (s.length === MAX_SAFE_INTEGER_STR_LENGTH &amp;&amp; s &lt;= MAX_SAFE_INTEGER_STR)) {
+    return true;
+  }
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+utils.timestamp(1385091596000); // Fri Nov 22 2013 11:39:56 GMT+0800 (CST)
+```
+
+### Number utils
+
+```js
+// Detect a number string can safe convert to Javascript Number.: `-9007199254740991 ~ 9007199254740991`
+utils.<span class="apidocCodeKeywordSpan">isSafeNumberString</span>('9007199254740991'); // true
+utils.isSafeNumberString('9007199254740993'); // false
+
+// Convert string to number safe:
+utils.toSafeNumber('9007199254740991'); // 9007199254740991
+utils.toSafeNumber('9007199254740993'); // '9007199254740993'
+
+// Produces a random integer between the inclusive `lower` and exclusive `upper` bounds.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.logDate" id="apidoc.element.utility.logDate">
+        function <span class="apidocSignatureSpan">utility.</span>logDate
+        <span class="apidocSignatureSpan">(d, msSep)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">logDate = function (d, msSep) {
+  if (typeof d === 'string') {
+    // logDate(msSep)
+    msSep = d;
+    d = new Date();
+  } else {
+    // logDate(d, msSep)
+    d = d || new Date();
+  }
+  var date = d.getDate();
+  if (date &lt; 10) {
+    date = '0' + date;
+  }
+  var month = d.getMonth() + 1;
+  if (month &lt; 10) {
+    month = '0' + month;
+  }
+  var hours = d.getHours();
+  if (hours &lt; 10) {
+    hours = '0' + hours;
+  }
+  var mintues = d.getMinutes();
+  if (mintues &lt; 10) {
+    mintues = '0' + mintues;
+  }
+  var seconds = d.getSeconds();
+  if (seconds &lt; 10) {
+    seconds = '0' + seconds;
+  }
+  var milliseconds = d.getMilliseconds();
+  if (milliseconds &lt; 10) {
+    milliseconds = '00' + milliseconds;
+  } else if (milliseconds &lt; 100) {
+    milliseconds = '0' + milliseconds;
+  }
+  return d.getFullYear() + '-' + month + '-' + date + ' ' +
+    hours + ':' + mintues + ':' + seconds + (msSep || '.') + milliseconds;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+// accessLogDate
+utils.accessLogDate(); // '16/Apr/2013:16:40:09 +0800'
+
+// logDate,
+// 'YYYY-MM-DD HH:mm:ss.SSS' format date string
+utils.<span class="apidocCodeKeywordSpan">logDate</span>(); // '2013-04-17 14:43:02.674'
+utils.YYYYMMDDHHmmssSSS(); // '2013-04-17 14:43:02.674'
+utils.YYYYMMDDHHmmssSSS(','); // '2013-04-17 14:43:02,674'
+
+// 'YYYY-MM-DD HH:mm:ss' format date string
+utils.YYYYMMDDHHmmss(); // '2013-04-17 14:43:02'
+utils.YYYYMMDDHHmmss(new Date(), {dateSep: '.'}); // '2013.04.17 14:43:02'
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.map" id="apidoc.element.utility.map">
+        function <span class="apidocSignatureSpan">utility.</span>map
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function map(obj) {
+  var map = new EmptyObject();
+  if (!obj) {
+    return map;
+  }
+
+  for (var key in obj) {
+    map[key] = obj[key];
+  }
+  return map;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### map
+
+Create a `real` map in javascript.
+
+use `Object.create(null)`
+
+```js
+const map = utils.<span class="apidocCodeKeywordSpan">map</span>({a: 1});
+
+// should.not.exist(map.constractor);
+// should.not.exist(map.__proto__);
+// should.not.exist(map.toString);
+// should not exist any property
+
+console.log(map); // {a: 1}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.md5" id="apidoc.element.utility.md5">
+        function <span class="apidocSignatureSpan">utility.</span>md5
+        <span class="apidocSignatureSpan">(s, format)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function md5(s, format) {
+  return exports.hash('md5', s, format);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+const utils = require('utility');
+```
+
+### md5
+
+```js
+utils.<span class="apidocCodeKeywordSpan">md5</span>('è‹åƒ').should.equal('5f733c47c58a077d61257102b2d44481');
+utils.md5(new Buffer('è‹åƒ')).should.equal('5f733c47c58a077d61257102b2d44481');
+// md5 base64 format
+utils.md5('è‹åƒ', 'base64'); // 'X3M8R8WKB31hJXECstREgQ=='
+
+// Object md5 hash. Sorted by key, and JSON.stringify. See source code for detail
+utils.md5({foo: 'bar', bar: 'foo'}).should.equal(utils.md5({bar: 'foo', foo: 'bar'}));
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.noop" id="apidoc.element.utility.noop">
+        function <span class="apidocSignatureSpan">utility.</span>noop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noop() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.random" id="apidoc.element.utility.random">
+        function <span class="apidocSignatureSpan">utility.</span>random
+        <span class="apidocSignatureSpan">(lower, upper)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function random(lower, upper) {
+  if (lower === undefined &amp;&amp; upper === undefined) {
+    return 0;
+  }
+  if (upper === undefined) {
+    upper = lower;
+    lower = 0;
+  }
+  var temp;
+  if (lower &gt; upper) {
+    temp = lower;
+    lower = upper;
+    upper = temp;
+  }
+  return Math.floor(lower + Math.random() * (upper - lower));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+utils.isSafeNumberString('9007199254740993'); // false
+
+// Convert string to number safe:
+utils.toSafeNumber('9007199254740991'); // 9007199254740991
+utils.toSafeNumber('9007199254740993'); // '9007199254740993'
+
+// Produces a random integer between the inclusive `lower` and exclusive `upper` bounds.
+utils.<span class="apidocCodeKeywordSpan">random</span>(100); // [0, 100)
+utils.random(2, 1000); // [2, 1000)
+utils.random(); // 0
+```
+
+### Timers
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.randomSlice" id="apidoc.element.utility.randomSlice">
+        function <span class="apidocSignatureSpan">utility.</span>randomSlice
+        <span class="apidocSignatureSpan">(arr, num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function randomSlice(arr, num) {
+  if (!num || num &gt;= arr.length) {
+    return arr.slice();
+  }
+  var index = Math.floor(Math.random() * arr.length);
+  var a = [];
+  for (var i = 0, j = index; i &lt; num; i++) {
+    a.push(arr[j++]);
+    if (j === arr.length) {
+      j = 0;
+    }
+  }
+  return a;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.randomString" id="apidoc.element.utility.randomString">
+        function <span class="apidocSignatureSpan">utility.</span>randomString
+        <span class="apidocSignatureSpan">(length, charSet)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function randomString(length, charSet) {
+  var result = [];
+  length = length || 16;
+  charSet = charSet || 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+  while (length--) {
+    result.push(charSet[Math.floor(Math.random() * charSet.length)]);
+  }
+  return result.join('');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+___[WARNNING] getIP() remove, PLEASE use `https://github.com/node-modules/address` module instead.___
+
+```js
+// get a function parameter's names
+utils.getParamNames(function (key1, key2) {}); // ['key1', 'key2']
+
+// get a random string, default length is 16.
+utils.<span class="apidocCodeKeywordSpan">randomString</span>(32, '1234567890'); //18774480824014856763726145106142
+
+// check if object has this property
+utils.has({hello: 'world'}, 'hello'); //true
+
+// empty function
+utils.noop = function () {}
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.replace" id="apidoc.element.utility.replace">
+        function <span class="apidocSignatureSpan">utility.</span>replace
+        <span class="apidocSignatureSpan">(str, substr, newSubstr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function replace(str, substr, newSubstr) {
+  var replaceFunction = newSubstr;
+  if (typeof replaceFunction !== 'function') {
+    replaceFunction = function () {
+      return newSubstr;
+    };
+  }
+  return str.replace(substr, replaceFunction);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### String utils
+
+```js
+// split string by sep
+utils.split('foo,bar,,,', ','); // ['foo', 'bar']
+
+// replace string work with special chars which `String.prototype.replace` can't handle
+utils.<span class="apidocCodeKeywordSpan">replace</span>('&lt;body&gt; hi', '&lt;body&gt;', '$&amp;#
+x26; body'); // '$&amp; body hi'
+
+// replace http header invalid characters
+utils.replaceInvalidHttpHeaderChar('abcä½&nbsp;å¥½11'); // {invalid: true, val: 'abc  11'}
+```
+
+### Try
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.replaceInvalidHttpHeaderChar" id="apidoc.element.utility.replaceInvalidHttpHeaderChar">
+        function <span class="apidocSignatureSpan">utility.</span>replaceInvalidHttpHeaderChar
+        <span class="apidocSignatureSpan">(val, replacement)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function replaceInvalidHttpHeaderChar(val, replacement) {
+  replacement = replacement || ' ';
+  var invalid = false;
+
+  if (!val || typeof val !== 'string') {
+    return {
+      val: val,
+      invalid: invalid,
+    };
+  }
+
+  var replacementType = typeof replacement;
+  var chars;
+  for (var i = 0; i &lt; val.length; ++i) {
+    if (!validHdrChars[val.charCodeAt(i)]) {
+      // delay create chars
+      chars = chars || val.split('');
+      if (replacementType === 'function') {
+        chars[i] = replacement(chars[i]);
+      } else {
+        chars[i] = replacement;
+      }
+    }
+  }
+
+  if (chars) {
+    val = chars.join('');
+    invalid = true;
+  }
+
+  return {
+    val: val,
+    invalid: invalid,
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// split string by sep
+utils.split('foo,bar,,,', ','); // ['foo', 'bar']
+
+// replace string work with special chars which `String.prototype.replace` can't handle
+utils.replace('&lt;body&gt; hi', '&lt;body&gt;', '$&amp; body'); // '$&amp; body hi
+'
+
+// replace http header invalid characters
+utils.<span class="apidocCodeKeywordSpan">replaceInvalidHttpHeaderChar</span>('abcä½&nbsp;å¥½11'); // {invalid: true, val: '
+;abc  11'}
+```
+
+### Try
+
+```js
+const res = utils.try(function () {
+return JSON.parse(str);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.setImmediate" id="apidoc.element.utility.setImmediate">
+        function <span class="apidocSignatureSpan">utility.</span>setImmediate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setImmediate = function () {
+<span class="apidocCodeCommentSpan">/*
+ * this function will do nothing
+ */
+</span>    return;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+utils.random(2, 1000); // [2, 1000)
+utils.random(); // 0
+```
+
+### Timers
+
+```js
+utils.<span class="apidocCodeKeywordSpan">setImmediate</span>(function () {
+  console.log('hi');
+});
+```
+
+### map
+
+Create a `real` map in javascript.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.sha1" id="apidoc.element.utility.sha1">
+        function <span class="apidocSignatureSpan">utility.</span>sha1
+        <span class="apidocSignatureSpan">(s, format)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sha1(s, format) {
+  return exports.hash('sha1', s, format);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Object md5 hash. Sorted by key, and JSON.stringify. See source code for detail
+utils.md5({foo: 'bar', bar: 'foo'}).should.equal(utils.md5({bar: 'foo', foo: 'bar'}));
+```
+
+### sha1
+
+```js
+utils.<span class="apidocCodeKeywordSpan">sha1</span>('è‹åƒ').should.equal('0a4aff6bab634b9c2f99b71f25e976921fcde5a5
+');
+utils.sha1(new Buffer('è‹åƒ')).should.equal('0a4aff6bab634b9c2f99b71f25e976921fcde5a5');
+// sha1 base64 format
+utils.sha1('è‹åƒ', 'base64'); // 'Ckr/a6tjS5wvmbcfJel2kh/N5aU='
+
+// Object sha1 hash. Sorted by key, and JSON.stringify. See source code for detail
+utils.sha1({foo: 'bar', bar: 'foo'}).should.equal(utils.sha1({bar: 'foo', foo: 'bar'}));
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.sha256" id="apidoc.element.utility.sha256">
+        function <span class="apidocSignatureSpan">utility.</span>sha256
+        <span class="apidocSignatureSpan">(s, format)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sha1(s, format) {
+  return exports.hash('sha256', s, format);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Object sha1 hash. Sorted by key, and JSON.stringify. See source code for detail
+utils.sha1({foo: 'bar', bar: 'foo'}).should.equal(utils.sha1({bar: 'foo', foo: 'bar'}));
+```
+
+### sha256
+
+```js
+utils.<span class="apidocCodeKeywordSpan">sha256</span>(new Buffer('è‹åƒ')).should.equal('75dd03e3fcdbba7d5bec07900bae740cc8e361d77e7df8949de421d3df5d3635
+');
+```
+
+### hmac
+
+```js
+// hmac-sha1 with base64 output encoding
+utils.hmac('sha1', 'I am a key', 'hello world'); // 'pO6J0LKDxRRkvSECSEdxwKx84L0='
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.spliceOne" id="apidoc.element.utility.spliceOne">
+        function <span class="apidocSignatureSpan">utility.</span>spliceOne
+        <span class="apidocSignatureSpan">(arr, index)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function spliceOne(arr, index) {
+  if (index &lt; 0) {
+    index = arr.length + index;
+    // still negative, not found element
+    if (index &lt; 0) {
+      return arr;
+    }
+  }
+
+  // don't touch
+  if (index &gt;= arr.length) {
+    return arr;
+  }
+
+  for (var i = index, k = i + 1, n = arr.length; k &lt; n; i += 1, k += 1) {
+    arr[i] = arr[k];
+  }
+  arr.pop();
+  return arr;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.split" id="apidoc.element.utility.split">
+        function <span class="apidocSignatureSpan">utility.</span>split
+        <span class="apidocSignatureSpan">(str, sep)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function split(str, sep) {
+  str = str || '';
+  sep = sep || ',';
+  var items = str.split(sep);
+  var needs = [];
+  for (var i = 0; i &lt; items.length; i++) {
+    var s = items[i].trim();
+    if (s.length &gt; 0) {
+      needs.push(s);
+    }
+  }
+  return needs;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+console.log(map); // {a: 1}
+```
+
+### String utils
+
+```js
+// split string by sep
+utils.<span class="apidocCodeKeywordSpan">split</span>('foo,bar,,,', ','); // ['foo', 'bar'
+;]
+
+// replace string work with special chars which `String.prototype.replace` can't handle
+utils.replace('&lt;body&gt; hi', '&lt;body&gt;', '$&amp; body'); // '$&amp; body hi
+'
+
+// replace http header invalid characters
+utils.replaceInvalidHttpHeaderChar('abcä½&nbsp;å¥½11'); // {invalid: true, val: 'abc  11'}
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.splitAlwaysOptimized" id="apidoc.element.utility.splitAlwaysOptimized">
+        function <span class="apidocSignatureSpan">utility.</span>splitAlwaysOptimized
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function splitAlwaysOptimized() {
+  var str = '';
+  var sep = ',';
+  if (arguments.length === 1) {
+    str = arguments[0] || '';
+  } else if (arguments.length === 2) {
+    str = arguments[0] || '';
+    sep = arguments[1] || ',';
+  }
+  var items = str.split(sep);
+  var needs = [];
+  for (var i = 0; i &lt; items.length; i++) {
+    var s = items[i].trim();
+    if (s.length &gt; 0) {
+      needs.push(s);
+    }
+  }
+  return needs;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.strictJSONParse" id="apidoc.element.utility.strictJSONParse">
+        function <span class="apidocSignatureSpan">utility.</span>strictJSONParse
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">strictJSONParse = function (str) {
+  var obj = JSON.parse(str);
+  if (!obj || typeof obj !== 'object') {
+    throw new Error('JSON string is not object');
+  }
+  return obj;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.timestamp" id="apidoc.element.utility.timestamp">
+        function <span class="apidocSignatureSpan">utility.</span>timestamp
+        <span class="apidocSignatureSpan">(t)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function timestamp(t) {
+  if (t) {
+    var v = t;
+    if (typeof v === 'string') {
+      v = Number(v);
+    }
+    if (String(t).length === 10) {
+      v *= 1000;
+    }
+    return new Date(v);
+  }
+  return Math.round(Date.now() / 1000);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+utils.YYYYMMDD(''); // '20130417'
+utils.YYYYMMDD(','); // '2013,04,17'
+
+// datestruct
+utils.datestruct(); // { YYYYMMDD: 20130416, H: 8 }
+
+// Unix's timestamp
+utils.<span class="apidocCodeKeywordSpan">timestamp</span>(); // 1378153226
+
+// Parse timestamp
+// seconds
+utils.timestamp(1385091596); // Fri Nov 22 2013 11:39:56 GMT+0800 (CST)
+// millseconds
+utils.timestamp(1385091596000); // Fri Nov 22 2013 11:39:56 GMT+0800 (CST)
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.toSafeNumber" id="apidoc.element.utility.toSafeNumber">
+        function <span class="apidocSignatureSpan">utility.</span>toSafeNumber
+        <span class="apidocSignatureSpan">(s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toSafeNumber(s) {
+  if (typeof s === 'number') {
+    return s;
+  }
+
+  return exports.isSafeNumberString(s) ? Number(s) : s;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+// Detect a number string can safe convert to Javascript Number.: `-9007199254740991 ~ 9007199254740991`
+utils.isSafeNumberString('9007199254740991'); // true
+utils.isSafeNumberString('9007199254740993'); // false
+
+// Convert string to number safe:
+utils.<span class="apidocCodeKeywordSpan">toSafeNumber</span>('9007199254740991'); // 9007199254740991
+utils.toSafeNumber('9007199254740993'); // '9007199254740993'
+
+// Produces a random integer between the inclusive `lower` and exclusive `upper` bounds.
+utils.random(100); // [0, 100)
+utils.random(2, 1000); // [2, 1000)
+utils.random(); // 0
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.try" id="apidoc.element.utility.try">
+        function <span class="apidocSignatureSpan">utility.</span>try
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">try = function (fn) {
+  var res = {
+    error: undefined,
+    value: undefined
+  };
+
+  try {
+    res.value = fn();
+  } catch (err) {
+    res.error = err instanceof Error
+      ? err
+      : new Error(err);
+  }
+
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// replace http header invalid characters
+utils.replaceInvalidHttpHeaderChar('abcä½&nbsp;å¥½11'); // {invalid: true, val: 'abc  11'}
+```
+
+### Try
+
+```js
+const res = utils.<span class="apidocCodeKeywordSpan">try</span>(function () {
+  return JSON.parse(str);
+});
+
+// {error: undefined, value: {foo: 'bar'}}
+// {error: Error, value: undefined}
+```
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.utility.array" id="apidoc.module.utility.array">module utility.array</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.utility.array.randomSlice" id="apidoc.element.utility.array.randomSlice">
+        function <span class="apidocSignatureSpan">utility.array.</span>randomSlice
+        <span class="apidocSignatureSpan">(arr, num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function randomSlice(arr, num) {
+  if (!num || num &gt;= arr.length) {
+    return arr.slice();
+  }
+  var index = Math.floor(Math.random() * arr.length);
+  var a = [];
+  for (var i = 0, j = index; i &lt; num; i++) {
+    a.push(arr[j++]);
+    if (j === arr.length) {
+      j = 0;
+    }
+  }
+  return a;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.array.spliceOne" id="apidoc.element.utility.array.spliceOne">
+        function <span class="apidocSignatureSpan">utility.array.</span>spliceOne
+        <span class="apidocSignatureSpan">(arr, index)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function spliceOne(arr, index) {
+  if (index &lt; 0) {
+    index = arr.length + index;
+    // still negative, not found element
+    if (index &lt; 0) {
+      return arr;
+    }
+  }
+
+  // don't touch
+  if (index &gt;= arr.length) {
+    return arr;
+  }
+
+  for (var i = index, k = i + 1, n = arr.length; k &lt; n; i += 1, k += 1) {
+    arr[i] = arr[k];
+  }
+  arr.pop();
+  return arr;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.utility.crypto" id="apidoc.module.utility.crypto">module utility.crypto</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.utility.crypto.base64decode" id="apidoc.element.utility.crypto.base64decode">
+        function <span class="apidocSignatureSpan">utility.crypto.</span>base64decode
+        <span class="apidocSignatureSpan">(encodeStr, urlsafe, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function base64decode(encodeStr, urlsafe, encoding) {
+  if (urlsafe) {
+    encodeStr = encodeStr.replace(/\-/g, '+').replace(/_/g, '/');
+  }
+  var buf = new Buffer(encodeStr, 'base64');
+  if (encoding === 'buffer') {
+    return buf;
+  }
+  return buf.toString(encoding || 'utf8');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+### decode and encode
+
+```js
+// base64 encode
+utils.base64encode('ä½&nbsp;å¥½ï¿¥'); // '5L2g5aW977+l'
+utils.<span class="apidocCodeKeywordSpan">base64decode</span>('5L2g5aW977+l') // 'ä½&nbsp;å¥½ï¿¥'
+
+// urlsafe base64 encode
+utils.base64encode('ä½&nbsp;å¥½ï¿¥', true); // '5L2g5aW977-l'
+utils.base64decode('5L2g5aW977-l', true); // 'ä½&nbsp;å¥½ï¿¥'
+
+// html escape
+utils.escape('&lt;script/&gt;"&amp; &amp;amp;'); // '&amp;lt;script/&amp;gt;&amp;quot;&amp;amp; &amp;#
+x26;amp;'
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.crypto.base64encode" id="apidoc.element.utility.crypto.base64encode">
+        function <span class="apidocSignatureSpan">utility.crypto.</span>base64encode
+        <span class="apidocSignatureSpan">(s, urlsafe)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function base64encode(s, urlsafe) {
+  if (!Buffer.isBuffer(s)) {
+    s = new Buffer(s);
+  }
+  var encode = s.toString('base64');
+  if (urlsafe) {
+    encode = encode.replace(/\+/g, '-').replace(/\//g, '_');
+  }
+  return encode;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+utils.hmac('sha1', 'I am a key', 'hello world'); // 'pO6J0LKDxRRkvSECSEdxwKx84L0='
+```
+
+### decode and encode
+
+```js
+// base64 encode
+utils.<span class="apidocCodeKeywordSpan">base64encode</span>('ä½&nbsp;å¥½ï¿¥'); // '5L2g5aW977+l'
+utils.base64decode('5L2g5aW977+l') // 'ä½&nbsp;å¥½ï¿¥'
+
+// urlsafe base64 encode
+utils.base64encode('ä½&nbsp;å¥½ï¿¥', true); // '5L2g5aW977-l'
+utils.base64decode('5L2g5aW977-l', true); // 'ä½&nbsp;å¥½ï¿¥'
+
+// html escape
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.crypto.hash" id="apidoc.element.utility.crypto.hash">
+        function <span class="apidocSignatureSpan">utility.crypto.</span>hash
+        <span class="apidocSignatureSpan">(method, s, format)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hash(method, s, format) {
+  var sum = crypto.createHash(method);
+  var isBuffer = Buffer.isBuffer(s);
+  if (!isBuffer &amp;&amp; typeof s === 'object') {
+    s = JSON.stringify(sortObject(s));
+  }
+  sum.update(s, isBuffer ? 'binary' : 'utf8');
+  return sum.digest(format || 'hex');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*
+* @param {String|Buffer} s
+* @param {String} [format] output string format, could be 'hex' or 'base64'. default is 'hex'.
+* @return {String} md5 hash string
+* @public
+*/
+exports.md5 = function md5(s, format) {
+ return exports.<span class="apidocCodeKeywordSpan">hash</span>('md5', s, format);
+};
+
+/**
+* sha1 hash
+*
+* @param {String|Buffer} s
+* @param {String} [format] output string format, could be 'hex' or 'base64'. default is 'hex'.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.crypto.hmac" id="apidoc.element.utility.crypto.hmac">
+        function <span class="apidocSignatureSpan">utility.crypto.</span>hmac
+        <span class="apidocSignatureSpan">(algorithm, key, data, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hmac(algorithm, key, data, encoding) {
+  encoding = encoding || 'base64';
+  var hmac = crypto.createHmac(algorithm, key);
+  hmac.update(data, Buffer.isBuffer(data) ? 'binary' : 'utf8');
+  return hmac.digest(encoding);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+utils.sha256(new Buffer('è‹åƒ')).should.equal('75dd03e3fcdbba7d5bec07900bae740cc8e361d77e7df8949de421d3df5d3635'
+;);
+```
+
+### hmac
+
+```js
+// hmac-sha1 with base64 output encoding
+utils.<span class="apidocCodeKeywordSpan">hmac</span>('sha1', 'I am a key', 'hello world'); // '
+;pO6J0LKDxRRkvSECSEdxwKx84L0='
+```
+
+### decode and encode
+
+```js
+// base64 encode
+utils.base64encode('ä½&nbsp;å¥½ï¿¥'); // '5L2g5aW977+l'
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.crypto.md5" id="apidoc.element.utility.crypto.md5">
+        function <span class="apidocSignatureSpan">utility.crypto.</span>md5
+        <span class="apidocSignatureSpan">(s, format)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function md5(s, format) {
+  return exports.hash('md5', s, format);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+const utils = require('utility');
+```
+
+### md5
+
+```js
+utils.<span class="apidocCodeKeywordSpan">md5</span>('è‹åƒ').should.equal('5f733c47c58a077d61257102b2d44481');
+utils.md5(new Buffer('è‹åƒ')).should.equal('5f733c47c58a077d61257102b2d44481');
+// md5 base64 format
+utils.md5('è‹åƒ', 'base64'); // 'X3M8R8WKB31hJXECstREgQ=='
+
+// Object md5 hash. Sorted by key, and JSON.stringify. See source code for detail
+utils.md5({foo: 'bar', bar: 'foo'}).should.equal(utils.md5({bar: 'foo', foo: 'bar'}));
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.crypto.sha1" id="apidoc.element.utility.crypto.sha1">
+        function <span class="apidocSignatureSpan">utility.crypto.</span>sha1
+        <span class="apidocSignatureSpan">(s, format)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sha1(s, format) {
+  return exports.hash('sha1', s, format);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Object md5 hash. Sorted by key, and JSON.stringify. See source code for detail
+utils.md5({foo: 'bar', bar: 'foo'}).should.equal(utils.md5({bar: 'foo', foo: 'bar'}));
+```
+
+### sha1
+
+```js
+utils.<span class="apidocCodeKeywordSpan">sha1</span>('è‹åƒ').should.equal('0a4aff6bab634b9c2f99b71f25e976921fcde5a5
+');
+utils.sha1(new Buffer('è‹åƒ')).should.equal('0a4aff6bab634b9c2f99b71f25e976921fcde5a5');
+// sha1 base64 format
+utils.sha1('è‹åƒ', 'base64'); // 'Ckr/a6tjS5wvmbcfJel2kh/N5aU='
+
+// Object sha1 hash. Sorted by key, and JSON.stringify. See source code for detail
+utils.sha1({foo: 'bar', bar: 'foo'}).should.equal(utils.sha1({bar: 'foo', foo: 'bar'}));
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.crypto.sha256" id="apidoc.element.utility.crypto.sha256">
+        function <span class="apidocSignatureSpan">utility.crypto.</span>sha256
+        <span class="apidocSignatureSpan">(s, format)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sha1(s, format) {
+  return exports.hash('sha256', s, format);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Object sha1 hash. Sorted by key, and JSON.stringify. See source code for detail
+utils.sha1({foo: 'bar', bar: 'foo'}).should.equal(utils.sha1({bar: 'foo', foo: 'bar'}));
+```
+
+### sha256
+
+```js
+utils.<span class="apidocCodeKeywordSpan">sha256</span>(new Buffer('è‹åƒ')).should.equal('75dd03e3fcdbba7d5bec07900bae740cc8e361d77e7df8949de421d3df5d3635
+');
+```
+
+### hmac
+
+```js
+// hmac-sha1 with base64 output encoding
+utils.hmac('sha1', 'I am a key', 'hello world'); // 'pO6J0LKDxRRkvSECSEdxwKx84L0='
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.utility.date" id="apidoc.module.utility.date">module utility.date</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.utility.date.YYYYMMDD" id="apidoc.element.utility.date.YYYYMMDD">
+        function <span class="apidocSignatureSpan">utility.date.</span>YYYYMMDD
+        <span class="apidocSignatureSpan">(d, sep)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function YYYYMMDD(d, sep) {
+  if (typeof d === 'string') {
+    // YYYYMMDD(sep)
+    sep = d;
+    d = new Date();
+  } else {
+    // YYYYMMDD(d, sep)
+    d = d || new Date();
+    if (typeof sep !== 'string') {
+      sep = '-';
+    }
+  }
+  var date = d.getDate();
+  if (date &lt; 10) {
+    date = '0' + date;
+  }
+  var month = d.getMonth() + 1;
+  if (month &lt; 10) {
+    month = '0' + month;
+  }
+  return d.getFullYear() + sep + month + sep + date;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+utils.YYYYMMDDHHmmssSSS(','); // '2013-04-17 14:43:02,674'
+
+// 'YYYY-MM-DD HH:mm:ss' format date string
+utils.YYYYMMDDHHmmss(); // '2013-04-17 14:43:02'
+utils.YYYYMMDDHHmmss(new Date(), {dateSep: '.'}); // '2013.04.17 14:43:02'
+
+// 'YYYY-MM-DD' format date string
+utils.<span class="apidocCodeKeywordSpan">YYYYMMDD</span>(); // '2013-04-17'
+utils.YYYYMMDD(''); // '20130417'
+utils.YYYYMMDD(','); // '2013,04,17'
+
+// datestruct
+utils.datestruct(); // { YYYYMMDD: 20130416, H: 8 }
+
+// Unix's timestamp
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.date.YYYYMMDDHHmmss" id="apidoc.element.utility.date.YYYYMMDDHHmmss">
+        function <span class="apidocSignatureSpan">utility.date.</span>YYYYMMDDHHmmss
+        <span class="apidocSignatureSpan">(d, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">YYYYMMDDHHmmss = function (d, options) {
+  d = d || new Date();
+  if (!(d instanceof Date)) {
+    d = new Date(d);
+  }
+
+  var dateSep = '-';
+  var timeSep = ':';
+  if (options) {
+    if (options.dateSep) {
+      dateSep = options.dateSep;
+    }
+    if (options.timeSep) {
+      timeSep = options.timeSep;
+    }
+  }
+  var date = d.getDate();
+  if (date &lt; 10) {
+    date = '0' + date;
+  }
+  var month = d.getMonth() + 1;
+  if (month &lt; 10) {
+    month = '0' + month;
+  }
+  var hours = d.getHours();
+  if (hours &lt; 10) {
+    hours = '0' + hours;
+  }
+  var mintues = d.getMinutes();
+  if (mintues &lt; 10) {
+    mintues = '0' + mintues;
+  }
+  var seconds = d.getSeconds();
+  if (seconds &lt; 10) {
+    seconds = '0' + seconds;
+  }
+  return d.getFullYear() + dateSep + month + dateSep + date + ' ' +
+    hours + timeSep + mintues + timeSep + seconds;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// logDate,
+// 'YYYY-MM-DD HH:mm:ss.SSS' format date string
+utils.logDate(); // '2013-04-17 14:43:02.674'
+utils.YYYYMMDDHHmmssSSS(); // '2013-04-17 14:43:02.674'
+utils.YYYYMMDDHHmmssSSS(','); // '2013-04-17 14:43:02,674'
+
+// 'YYYY-MM-DD HH:mm:ss' format date string
+utils.<span class="apidocCodeKeywordSpan">YYYYMMDDHHmmss</span>(); // '2013-04-17 14:43:02'
+utils.YYYYMMDDHHmmss(new Date(), {dateSep: '.'}); // '2013.04.17 14:43:02'
+
+// 'YYYY-MM-DD' format date string
+utils.YYYYMMDD(); // '2013-04-17'
+utils.YYYYMMDD(''); // '20130417'
+utils.YYYYMMDD(','); // '2013,04,17'
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.date.YYYYMMDDHHmmssSSS" id="apidoc.element.utility.date.YYYYMMDDHHmmssSSS">
+        function <span class="apidocSignatureSpan">utility.date.</span>YYYYMMDDHHmmssSSS
+        <span class="apidocSignatureSpan">(d, msSep)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">YYYYMMDDHHmmssSSS = function (d, msSep) {
+  if (typeof d === 'string') {
+    // logDate(msSep)
+    msSep = d;
+    d = new Date();
+  } else {
+    // logDate(d, msSep)
+    d = d || new Date();
+  }
+  var date = d.getDate();
+  if (date &lt; 10) {
+    date = '0' + date;
+  }
+  var month = d.getMonth() + 1;
+  if (month &lt; 10) {
+    month = '0' + month;
+  }
+  var hours = d.getHours();
+  if (hours &lt; 10) {
+    hours = '0' + hours;
+  }
+  var mintues = d.getMinutes();
+  if (mintues &lt; 10) {
+    mintues = '0' + mintues;
+  }
+  var seconds = d.getSeconds();
+  if (seconds &lt; 10) {
+    seconds = '0' + seconds;
+  }
+  var milliseconds = d.getMilliseconds();
+  if (milliseconds &lt; 10) {
+    milliseconds = '00' + milliseconds;
+  } else if (milliseconds &lt; 100) {
+    milliseconds = '0' + milliseconds;
+  }
+  return d.getFullYear() + '-' + month + '-' + date + ' ' +
+    hours + ':' + mintues + ':' + seconds + (msSep || '.') + milliseconds;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+// accessLogDate
+utils.accessLogDate(); // '16/Apr/2013:16:40:09 +0800'
+
+// logDate,
+// 'YYYY-MM-DD HH:mm:ss.SSS' format date string
+utils.logDate(); // '2013-04-17 14:43:02.674'
+utils.<span class="apidocCodeKeywordSpan">YYYYMMDDHHmmssSSS</span>(); // '2013-04-17 14:43:02.674'
+utils.YYYYMMDDHHmmssSSS(','); // '2013-04-17 14:43:02,674'
+
+// 'YYYY-MM-DD HH:mm:ss' format date string
+utils.YYYYMMDDHHmmss(); // '2013-04-17 14:43:02'
+utils.YYYYMMDDHHmmss(new Date(), {dateSep: '.'}); // '2013.04.17 14:43:02'
+
+// 'YYYY-MM-DD' format date string
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.date.accessLogDate" id="apidoc.element.utility.date.accessLogDate">
+        function <span class="apidocSignatureSpan">utility.date.</span>accessLogDate
+        <span class="apidocSignatureSpan">(d)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">accessLogDate = function (d) {
+  // 16/Apr/2013:16:40:09 +0800
+  d = d || new Date();
+  var date = d.getDate();
+  if (date &lt; 10) {
+    date = '0' + date;
+  }
+  var hours = d.getHours();
+  if (hours &lt; 10) {
+    hours = '0' + hours;
+  }
+  var mintues = d.getMinutes();
+  if (mintues &lt; 10) {
+    mintues = '0' + mintues;
+  }
+  var seconds = d.getSeconds();
+  if (seconds &lt; 10) {
+    seconds = '0' + seconds;
+  }
+  return date + '/' + MONTHS[d.getMonth()] + '/' + d.getFullYear() +
+    ':' + hours + ':' + mintues + ':' + seconds + TIMEZONE;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+```
+
+### Date utils
+
+```js
+// accessLogDate
+utils.<span class="apidocCodeKeywordSpan">accessLogDate</span>(); // '16/Apr/2013:16:40:09 +0800'
+
+// logDate,
+// 'YYYY-MM-DD HH:mm:ss.SSS' format date string
+utils.logDate(); // '2013-04-17 14:43:02.674'
+utils.YYYYMMDDHHmmssSSS(); // '2013-04-17 14:43:02.674'
+utils.YYYYMMDDHHmmssSSS(','); // '2013-04-17 14:43:02,674'
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.date.datestruct" id="apidoc.element.utility.date.datestruct">
+        function <span class="apidocSignatureSpan">utility.date.</span>datestruct
+        <span class="apidocSignatureSpan">(now)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">datestruct = function (now) {
+  now = now || new Date();
+  return {
+    YYYYMMDD: now.getFullYear() * 10000 + (now.getMonth() + 1) * 100 + now.getDate(),
+    H: now.getHours()
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// 'YYYY-MM-DD' format date string
+utils.YYYYMMDD(); // '2013-04-17'
+utils.YYYYMMDD(''); // '20130417'
+utils.YYYYMMDD(','); // '2013,04,17'
+
+// datestruct
+utils.<span class="apidocCodeKeywordSpan">datestruct</span>(); // { YYYYMMDD: 20130416, H: 8 }
+
+// Unix's timestamp
+utils.timestamp(); // 1378153226
+
+// Parse timestamp
+// seconds
+utils.timestamp(1385091596); // Fri Nov 22 2013 11:39:56 GMT+0800 (CST)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.date.logDate" id="apidoc.element.utility.date.logDate">
+        function <span class="apidocSignatureSpan">utility.date.</span>logDate
+        <span class="apidocSignatureSpan">(d, msSep)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">logDate = function (d, msSep) {
+  if (typeof d === 'string') {
+    // logDate(msSep)
+    msSep = d;
+    d = new Date();
+  } else {
+    // logDate(d, msSep)
+    d = d || new Date();
+  }
+  var date = d.getDate();
+  if (date &lt; 10) {
+    date = '0' + date;
+  }
+  var month = d.getMonth() + 1;
+  if (month &lt; 10) {
+    month = '0' + month;
+  }
+  var hours = d.getHours();
+  if (hours &lt; 10) {
+    hours = '0' + hours;
+  }
+  var mintues = d.getMinutes();
+  if (mintues &lt; 10) {
+    mintues = '0' + mintues;
+  }
+  var seconds = d.getSeconds();
+  if (seconds &lt; 10) {
+    seconds = '0' + seconds;
+  }
+  var milliseconds = d.getMilliseconds();
+  if (milliseconds &lt; 10) {
+    milliseconds = '00' + milliseconds;
+  } else if (milliseconds &lt; 100) {
+    milliseconds = '0' + milliseconds;
+  }
+  return d.getFullYear() + '-' + month + '-' + date + ' ' +
+    hours + ':' + mintues + ':' + seconds + (msSep || '.') + milliseconds;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+// accessLogDate
+utils.accessLogDate(); // '16/Apr/2013:16:40:09 +0800'
+
+// logDate,
+// 'YYYY-MM-DD HH:mm:ss.SSS' format date string
+utils.<span class="apidocCodeKeywordSpan">logDate</span>(); // '2013-04-17 14:43:02.674'
+utils.YYYYMMDDHHmmssSSS(); // '2013-04-17 14:43:02.674'
+utils.YYYYMMDDHHmmssSSS(','); // '2013-04-17 14:43:02,674'
+
+// 'YYYY-MM-DD HH:mm:ss' format date string
+utils.YYYYMMDDHHmmss(); // '2013-04-17 14:43:02'
+utils.YYYYMMDDHHmmss(new Date(), {dateSep: '.'}); // '2013.04.17 14:43:02'
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.date.timestamp" id="apidoc.element.utility.date.timestamp">
+        function <span class="apidocSignatureSpan">utility.date.</span>timestamp
+        <span class="apidocSignatureSpan">(t)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function timestamp(t) {
+  if (t) {
+    var v = t;
+    if (typeof v === 'string') {
+      v = Number(v);
+    }
+    if (String(t).length === 10) {
+      v *= 1000;
+    }
+    return new Date(v);
+  }
+  return Math.round(Date.now() / 1000);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+utils.YYYYMMDD(''); // '20130417'
+utils.YYYYMMDD(','); // '2013,04,17'
+
+// datestruct
+utils.datestruct(); // { YYYYMMDD: 20130416, H: 8 }
+
+// Unix's timestamp
+utils.<span class="apidocCodeKeywordSpan">timestamp</span>(); // 1378153226
+
+// Parse timestamp
+// seconds
+utils.timestamp(1385091596); // Fri Nov 22 2013 11:39:56 GMT+0800 (CST)
+// millseconds
+utils.timestamp(1385091596000); // Fri Nov 22 2013 11:39:56 GMT+0800 (CST)
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.utility.function" id="apidoc.module.utility.function">module utility.function</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.utility.function.getParamNames" id="apidoc.element.utility.function.getParamNames">
+        function <span class="apidocSignatureSpan">utility.function.</span>getParamNames
+        <span class="apidocSignatureSpan">(func, cache)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getParamNames(func, cache) {
+  cache = cache !== false;
+  if (cache &amp;&amp; func.__cache_names) {
+    return func.__cache_names;
+  }
+  var str = func.toString();
+  var names = str.slice(str.indexOf('(') + 1, str.indexOf(')')).match(/([^\s,]+)/g) || [];
+  func.__cache_names = names;
+  return names;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### others
+
+___[WARNNING] getIP() remove, PLEASE use `https://github.com/node-modules/address` module instead.___
+
+```js
+// get a function parameter's names
+utils.<span class="apidocCodeKeywordSpan">getParamNames</span>(function (key1, key2) {}); // ['key1', 'key2']
+
+// get a random string, default length is 16.
+utils.randomString(32, '1234567890'); //18774480824014856763726145106142
+
+// check if object has this property
+utils.has({hello: 'world'}, 'hello'); //true
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.function.noop" id="apidoc.element.utility.function.noop">
+        function <span class="apidocSignatureSpan">utility.function.</span>noop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noop() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.utility.json" id="apidoc.module.utility.json">module utility.json</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.utility.json.strictJSONParse" id="apidoc.element.utility.json.strictJSONParse">
+        function <span class="apidocSignatureSpan">utility.json.</span>strictJSONParse
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">strictJSONParse = function (str) {
+  var obj = JSON.parse(str);
+  if (!obj || typeof obj !== 'object') {
+    throw new Error('JSON string is not object');
+  }
+  return obj;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.utility.number" id="apidoc.module.utility.number">module utility.number</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.utility.number.isSafeNumberString" id="apidoc.element.utility.number.isSafeNumberString">
+        function <span class="apidocSignatureSpan">utility.number.</span>isSafeNumberString
+        <span class="apidocSignatureSpan">(s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isSafeNumberString(s) {
+  if (s[0] === '-') {
+    s = s.substring(1);
+  }
+  if (s.length &lt; MAX_SAFE_INTEGER_STR_LENGTH ||
+    (s.length === MAX_SAFE_INTEGER_STR_LENGTH &amp;&amp; s &lt;= MAX_SAFE_INTEGER_STR)) {
+    return true;
+  }
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+utils.timestamp(1385091596000); // Fri Nov 22 2013 11:39:56 GMT+0800 (CST)
+```
+
+### Number utils
+
+```js
+// Detect a number string can safe convert to Javascript Number.: `-9007199254740991 ~ 9007199254740991`
+utils.<span class="apidocCodeKeywordSpan">isSafeNumberString</span>('9007199254740991'); // true
+utils.isSafeNumberString('9007199254740993'); // false
+
+// Convert string to number safe:
+utils.toSafeNumber('9007199254740991'); // 9007199254740991
+utils.toSafeNumber('9007199254740993'); // '9007199254740993'
+
+// Produces a random integer between the inclusive `lower` and exclusive `upper` bounds.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.number.random" id="apidoc.element.utility.number.random">
+        function <span class="apidocSignatureSpan">utility.number.</span>random
+        <span class="apidocSignatureSpan">(lower, upper)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function random(lower, upper) {
+  if (lower === undefined &amp;&amp; upper === undefined) {
+    return 0;
+  }
+  if (upper === undefined) {
+    upper = lower;
+    lower = 0;
+  }
+  var temp;
+  if (lower &gt; upper) {
+    temp = lower;
+    lower = upper;
+    upper = temp;
+  }
+  return Math.floor(lower + Math.random() * (upper - lower));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+utils.isSafeNumberString('9007199254740993'); // false
+
+// Convert string to number safe:
+utils.toSafeNumber('9007199254740991'); // 9007199254740991
+utils.toSafeNumber('9007199254740993'); // '9007199254740993'
+
+// Produces a random integer between the inclusive `lower` and exclusive `upper` bounds.
+utils.<span class="apidocCodeKeywordSpan">random</span>(100); // [0, 100)
+utils.random(2, 1000); // [2, 1000)
+utils.random(); // 0
+```
+
+### Timers
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.number.toSafeNumber" id="apidoc.element.utility.number.toSafeNumber">
+        function <span class="apidocSignatureSpan">utility.number.</span>toSafeNumber
+        <span class="apidocSignatureSpan">(s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toSafeNumber(s) {
+  if (typeof s === 'number') {
+    return s;
+  }
+
+  return exports.isSafeNumberString(s) ? Number(s) : s;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+// Detect a number string can safe convert to Javascript Number.: `-9007199254740991 ~ 9007199254740991`
+utils.isSafeNumberString('9007199254740991'); // true
+utils.isSafeNumberString('9007199254740993'); // false
+
+// Convert string to number safe:
+utils.<span class="apidocCodeKeywordSpan">toSafeNumber</span>('9007199254740991'); // 9007199254740991
+utils.toSafeNumber('9007199254740993'); // '9007199254740993'
+
+// Produces a random integer between the inclusive `lower` and exclusive `upper` bounds.
+utils.random(100); // [0, 100)
+utils.random(2, 1000); // [2, 1000)
+utils.random(); // 0
+```
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.utility.object" id="apidoc.module.utility.object">module utility.object</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.utility.object.assign" id="apidoc.element.utility.object.assign">
+        function <span class="apidocSignatureSpan">utility.object.</span>assign
+        <span class="apidocSignatureSpan">(target, objects)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">assign = function (target, objects) {
+  if (!Array.isArray(objects)) {
+    objects = [ objects ];
+  }
+
+  for (var i = 0; i &lt; objects.length; i++) {
+    var obj = objects[i];
+    if (obj) {
+      var keys = Object.keys(obj);
+      for (var j = 0; j &lt; keys.length; j++) {
+        var key = keys[j];
+        target[key] = obj[key];
+      }
+    }
+  }
+  return target;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+### Object.assign
+
+
+```js
+// assign object
+utility.<span class="apidocCodeKeywordSpan">assign</span>({}, { a: 1 });
+
+// assign multiple object
+utility.assign({}, [ { a: 1 }, { b: 1 } ]);
+```
+
+## benchmark
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.object.has" id="apidoc.element.utility.object.has">
+        function <span class="apidocSignatureSpan">utility.object.</span>has
+        <span class="apidocSignatureSpan">(obj, prop)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function has(obj, prop) {
+  return Object.prototype.hasOwnProperty.call(obj, prop);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// get a function parameter's names
+utils.getParamNames(function (key1, key2) {}); // ['key1', 'key2']
+
+// get a random string, default length is 16.
+utils.randomString(32, '1234567890'); //18774480824014856763726145106142
+
+// check if object has this property
+utils.<span class="apidocCodeKeywordSpan">has</span>({hello: 'world'}, 'hello'); //true
+
+// empty function
+utils.noop = function () {}
+}
+```
+
+### Date utils
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.object.map" id="apidoc.element.utility.object.map">
+        function <span class="apidocSignatureSpan">utility.object.</span>map
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function map(obj) {
+  var map = new EmptyObject();
+  if (!obj) {
+    return map;
+  }
+
+  for (var key in obj) {
+    map[key] = obj[key];
+  }
+  return map;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### map
+
+Create a `real` map in javascript.
+
+use `Object.create(null)`
+
+```js
+const map = utils.<span class="apidocCodeKeywordSpan">map</span>({a: 1});
+
+// should.not.exist(map.constractor);
+// should.not.exist(map.__proto__);
+// should.not.exist(map.toString);
+// should not exist any property
+
+console.log(map); // {a: 1}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.utility.optimize" id="apidoc.module.utility.optimize">module utility.optimize</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.utility.optimize.argumentsToArray" id="apidoc.element.utility.optimize.argumentsToArray">
+        function <span class="apidocSignatureSpan">utility.optimize.</span>argumentsToArray
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">argumentsToArray = function (args) {
+  var res = new Array(args.length);
+  for (var i = 0; i &lt; args.length; i++) {
+    res[i] = args[i];
+  }
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// {error: Error, value: undefined}
+```
+
+### argumentsToArray
+
+```js
+function() {
+  const arr = utility.<span class="apidocCodeKeywordSpan">argumentsToArray</span>(arguments);
+  console.log(arr.join(', '));
+}
+```
+
+### JSON
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.optimize.dig" id="apidoc.element.utility.optimize.dig">
+        function <span class="apidocSignatureSpan">utility.optimize.</span>dig
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dig = function (obj) {
+  if (!obj) {
+    return;
+  }
+  if (arguments.length &lt;= 1) {
+    return obj;
+  }
+
+  var value = obj[arguments[1]];
+  for (var i = 2; i &lt; arguments.length; i++) {
+    if (!value) {
+      break;
+    }
+    value = value[arguments[i]];
+  }
+
+  return value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.optimize.try" id="apidoc.element.utility.optimize.try">
+        function <span class="apidocSignatureSpan">utility.optimize.</span>try
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">try = function (fn) {
+  var res = {
+    error: undefined,
+    value: undefined
+  };
+
+  try {
+    res.value = fn();
+  } catch (err) {
+    res.error = err instanceof Error
+      ? err
+      : new Error(err);
+  }
+
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// replace http header invalid characters
+utils.replaceInvalidHttpHeaderChar('abcä½&nbsp;å¥½11'); // {invalid: true, val: 'abc  11'}
+```
+
+### Try
+
+```js
+const res = utils.<span class="apidocCodeKeywordSpan">try</span>(function () {
+  return JSON.parse(str);
+});
+
+// {error: undefined, value: {foo: 'bar'}}
+// {error: Error, value: undefined}
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.utility.polyfill" id="apidoc.module.utility.polyfill">module utility.polyfill</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.utility.polyfill.setImmediate" id="apidoc.element.utility.polyfill.setImmediate">
+        function <span class="apidocSignatureSpan">utility.polyfill.</span>setImmediate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setImmediate = function () {
+<span class="apidocCodeCommentSpan">/*
+ * this function will do nothing
+ */
+</span>    return;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+utils.random(2, 1000); // [2, 1000)
+utils.random(); // 0
+```
+
+### Timers
+
+```js
+utils.<span class="apidocCodeKeywordSpan">setImmediate</span>(function () {
+  console.log('hi');
+});
+```
+
+### map
+
+Create a `real` map in javascript.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.utility.string" id="apidoc.module.utility.string">module utility.string</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.utility.string.includesInvalidHttpHeaderChar" id="apidoc.element.utility.string.includesInvalidHttpHeaderChar">
+        function <span class="apidocSignatureSpan">utility.string.</span>includesInvalidHttpHeaderChar
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function includesInvalidHttpHeaderChar(val) {
+  if (!val || typeof val !== 'string') {
+    return false;
+  }
+
+  for (var i = 0; i &lt; val.length; ++i) {
+    if (!validHdrChars[val.charCodeAt(i)]) {
+      return true;
+    }
+  }
+
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.string.randomString" id="apidoc.element.utility.string.randomString">
+        function <span class="apidocSignatureSpan">utility.string.</span>randomString
+        <span class="apidocSignatureSpan">(length, charSet)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function randomString(length, charSet) {
+  var result = [];
+  length = length || 16;
+  charSet = charSet || 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+  while (length--) {
+    result.push(charSet[Math.floor(Math.random() * charSet.length)]);
+  }
+  return result.join('');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+___[WARNNING] getIP() remove, PLEASE use `https://github.com/node-modules/address` module instead.___
+
+```js
+// get a function parameter's names
+utils.getParamNames(function (key1, key2) {}); // ['key1', 'key2']
+
+// get a random string, default length is 16.
+utils.<span class="apidocCodeKeywordSpan">randomString</span>(32, '1234567890'); //18774480824014856763726145106142
+
+// check if object has this property
+utils.has({hello: 'world'}, 'hello'); //true
+
+// empty function
+utils.noop = function () {}
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.string.replace" id="apidoc.element.utility.string.replace">
+        function <span class="apidocSignatureSpan">utility.string.</span>replace
+        <span class="apidocSignatureSpan">(str, substr, newSubstr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function replace(str, substr, newSubstr) {
+  var replaceFunction = newSubstr;
+  if (typeof replaceFunction !== 'function') {
+    replaceFunction = function () {
+      return newSubstr;
+    };
+  }
+  return str.replace(substr, replaceFunction);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### String utils
+
+```js
+// split string by sep
+utils.split('foo,bar,,,', ','); // ['foo', 'bar']
+
+// replace string work with special chars which `String.prototype.replace` can't handle
+utils.<span class="apidocCodeKeywordSpan">replace</span>('&lt;body&gt; hi', '&lt;body&gt;', '$&amp;#
+x26; body'); // '$&amp; body hi'
+
+// replace http header invalid characters
+utils.replaceInvalidHttpHeaderChar('abcä½&nbsp;å¥½11'); // {invalid: true, val: 'abc  11'}
+```
+
+### Try
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.string.replaceInvalidHttpHeaderChar" id="apidoc.element.utility.string.replaceInvalidHttpHeaderChar">
+        function <span class="apidocSignatureSpan">utility.string.</span>replaceInvalidHttpHeaderChar
+        <span class="apidocSignatureSpan">(val, replacement)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function replaceInvalidHttpHeaderChar(val, replacement) {
+  replacement = replacement || ' ';
+  var invalid = false;
+
+  if (!val || typeof val !== 'string') {
+    return {
+      val: val,
+      invalid: invalid,
+    };
+  }
+
+  var replacementType = typeof replacement;
+  var chars;
+  for (var i = 0; i &lt; val.length; ++i) {
+    if (!validHdrChars[val.charCodeAt(i)]) {
+      // delay create chars
+      chars = chars || val.split('');
+      if (replacementType === 'function') {
+        chars[i] = replacement(chars[i]);
+      } else {
+        chars[i] = replacement;
+      }
+    }
+  }
+
+  if (chars) {
+    val = chars.join('');
+    invalid = true;
+  }
+
+  return {
+    val: val,
+    invalid: invalid,
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// split string by sep
+utils.split('foo,bar,,,', ','); // ['foo', 'bar']
+
+// replace string work with special chars which `String.prototype.replace` can't handle
+utils.replace('&lt;body&gt; hi', '&lt;body&gt;', '$&amp; body'); // '$&amp; body hi
+'
+
+// replace http header invalid characters
+utils.<span class="apidocCodeKeywordSpan">replaceInvalidHttpHeaderChar</span>('abcä½&nbsp;å¥½11'); // {invalid: true, val: '
+;abc  11'}
+```
+
+### Try
+
+```js
+const res = utils.try(function () {
+return JSON.parse(str);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.string.split" id="apidoc.element.utility.string.split">
+        function <span class="apidocSignatureSpan">utility.string.</span>split
+        <span class="apidocSignatureSpan">(str, sep)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function split(str, sep) {
+  str = str || '';
+  sep = sep || ',';
+  var items = str.split(sep);
+  var needs = [];
+  for (var i = 0; i &lt; items.length; i++) {
+    var s = items[i].trim();
+    if (s.length &gt; 0) {
+      needs.push(s);
+    }
+  }
+  return needs;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+console.log(map); // {a: 1}
+```
+
+### String utils
+
+```js
+// split string by sep
+utils.<span class="apidocCodeKeywordSpan">split</span>('foo,bar,,,', ','); // ['foo', 'bar'
+;]
+
+// replace string work with special chars which `String.prototype.replace` can't handle
+utils.replace('&lt;body&gt; hi', '&lt;body&gt;', '$&amp; body'); // '$&amp; body hi
+'
+
+// replace http header invalid characters
+utils.replaceInvalidHttpHeaderChar('abcä½&nbsp;å¥½11'); // {invalid: true, val: 'abc  11'}
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.string.splitAlwaysOptimized" id="apidoc.element.utility.string.splitAlwaysOptimized">
+        function <span class="apidocSignatureSpan">utility.string.</span>splitAlwaysOptimized
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function splitAlwaysOptimized() {
+  var str = '';
+  var sep = ',';
+  if (arguments.length === 1) {
+    str = arguments[0] || '';
+  } else if (arguments.length === 2) {
+    str = arguments[0] || '';
+    sep = arguments[1] || ',';
+  }
+  var items = str.split(sep);
+  var needs = [];
+  for (var i = 0; i &lt; items.length; i++) {
+    var s = items[i].trim();
+    if (s.length &gt; 0) {
+      needs.push(s);
+    }
+  }
+  return needs;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.utility.web" id="apidoc.module.utility.web">module utility.web</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.utility.web.decodeURIComponent" id="apidoc.element.utility.web.decodeURIComponent">
+        function <span class="apidocSignatureSpan">utility.web.</span>decodeURIComponent
+        <span class="apidocSignatureSpan">(encodeText)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function decodeURIComponent_(encodeText) {
+  try {
+    return decodeURIComponent(encodeText);
+  } catch (e) {
+    return encodeText;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+utils.base64encode('ä½&nbsp;å¥½ï¿¥', true); // '5L2g5aW977-l'
+utils.base64decode('5L2g5aW977-l', true); // 'ä½&nbsp;å¥½ï¿¥'
+
+// html escape
+utils.escape('&lt;script/&gt;"&amp; &amp;amp;'); // '&amp;lt;script/&amp;gt;&amp;quot;&amp;amp; &amp;#
+x26;amp;'
+
+// Safe encodeURIComponent and decodeURIComponent
+utils.<span class="apidocCodeKeywordSpan">decodeURIComponent</span>(utils.encodeURIComponent('ä½&nbsp;å¥½, nodejs')).should.equal
+('ä½&nbsp;å¥½, nodejs');
+```
+
+### others
+
+___[WARNNING] getIP() remove, PLEASE use `https://github.com/node-modules/address` module instead.___
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.web.encodeURIComponent" id="apidoc.element.utility.web.encodeURIComponent">
+        function <span class="apidocSignatureSpan">utility.web.</span>encodeURIComponent
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function encodeURIComponent_(text) {
+  try {
+    return encodeURIComponent(text);
+  } catch (e) {
+    return text;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+utils.base64encode('ä½&nbsp;å¥½ï¿¥', true); // '5L2g5aW977-l'
+utils.base64decode('5L2g5aW977-l', true); // 'ä½&nbsp;å¥½ï¿¥'
+
+// html escape
+utils.escape('&lt;script/&gt;"&amp; &amp;amp;'); // '&amp;lt;script/&amp;gt;&amp;quot;&amp;amp; &amp;#
+x26;amp;'
+
+// Safe encodeURIComponent and decodeURIComponent
+utils.decodeURIComponent(utils.<span class="apidocCodeKeywordSpan">encodeURIComponent</span>('ä½&nbsp;å¥½, nodejs')).should.equal
+('ä½&nbsp;å¥½, nodejs');
+```
+
+### others
+
+___[WARNNING] getIP() remove, PLEASE use `https://github.com/node-modules/address` module instead.___
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.utility.web.escape" id="apidoc.element.utility.web.escape">
+        function <span class="apidocSignatureSpan">utility.web.</span>escape
+        <span class="apidocSignatureSpan">(string)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function escapeHtml(string) {
+  var str = '' + string;
+  var match = matchHtmlRegExp.exec(str);
+
+  if (!match) {
+    return str;
+  }
+
+  var escape;
+  var html = '';
+  var index = 0;
+  var lastIndex = 0;
+
+  for (index = match.index; index &lt; str.length; index++) {
+    switch (str.charCodeAt(index)) {
+      case 34: // "
+        escape = '&amp;quot;';
+        break;
+      case 38: // &amp;
+        escape = '&amp;amp;';
+        break;
+      case 39: // '
+        escape = '&amp;#39;';
+        break;
+      case 60: // &lt;
+        escape = '&amp;lt;';
+        break;
+      case 62: // &gt;
+        escape = '&amp;gt;';
+        break;
+      default:
+        continue;
+    }
+
+    if (lastIndex !== index) {
+      html += str.substring(lastIndex, index);
+    }
+
+    lastIndex = index + 1;
+    html += escape;
+  }
+
+  return lastIndex !== index
+    ? html + str.substring(lastIndex, index)
+    : html;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+utils.base64decode('5L2g5aW977+l') // 'ä½&nbsp;å¥½ï¿¥'
+
+// urlsafe base64 encode
+utils.base64encode('ä½&nbsp;å¥½ï¿¥', true); // '5L2g5aW977-l'
+utils.base64decode('5L2g5aW977-l', true); // 'ä½&nbsp;å¥½ï¿¥'
+
+// html escape
+utils.<span class="apidocCodeKeywordSpan">escape</span>('&lt;script/&gt;"&amp; &amp;amp;'); // '&amp;
+lt;script/&amp;gt;&amp;quot;&amp;amp; &amp;amp;'
+
+// Safe encodeURIComponent and decodeURIComponent
+utils.decodeURIComponent(utils.encodeURIComponent('ä½&nbsp;å¥½, nodejs')).should.equal('ä½&nbsp;å¥½, nodejs');
+```
+
+### others
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
